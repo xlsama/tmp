@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev -o",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -16,8 +16,10 @@
     "@nuxt/image": "1.11.0",
     "@primeuix/themes": "^1.2.3",
     "@primevue/forms": "^4.3.7",
+    "dayjs": "^1.11.13",
+    "echarts": "^6.0.0",
     "eslint": "^9.32.0",
-    "nuxt": "^4.0.2",
+    "nuxt": "^4.0.3",
     "primeicons": "^7.0.0",
     "primevue": "^4.3.7",
     "vue": "^3.5.18",

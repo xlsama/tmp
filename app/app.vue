@@ -1,3 +1,5 @@
 <template>
-  <Button>Primary</Button>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
