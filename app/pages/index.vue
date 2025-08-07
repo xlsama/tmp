@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const date = ref();
+const date = ref()
 </script>
 
 <template>
