@@ -21,6 +21,8 @@ export default defineNuxtConfig({
   primevue: {
     options: {
       theme: {
+        // import { palette } from "@primeuix/themes";
+        // console.log("🚀 ~ ", palette("#006440")); 这样可以获取到 50 - 950 的色值，https://primevue.org/theming/styled/#Palette
         preset: definePreset(Aura, {
           semantic: {
             primary: {
