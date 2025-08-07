@@ -6,7 +6,7 @@ import Aura from "@primeuix/themes/aura";
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "Starbucks Store Health",
+      title: "Nuxt App",
     },
   },
   compatibilityDate: "2025-07-15",
@@ -21,8 +21,6 @@ export default defineNuxtConfig({
   primevue: {
     options: {
       theme: {
-        // import { palette } from "@primeuix/themes";
-        // console.log("🚀 ~ ", palette("#006440")); 这样可以获取到 50 - 950 的色值，https://primevue.org/theming/styled/#Palette
         preset: definePreset(Aura, {
           semantic: {
             primary: {

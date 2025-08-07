@@ -1,8 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const date = ref();
+</script>
 
 <template>
-  <div>
-    <div>{{ dayjs().format("YYYY-MM-DD") }}</div>
-    <Button>Click me</Button>
+  <div class="flex flex-col justify-center items-center pt-30 gap-5">
+    <Button>{{ dayjs(date).format("YYYY-MM-DD") }}</Button>
+    <DatePicker v-model="date" />
   </div>
 </template>
