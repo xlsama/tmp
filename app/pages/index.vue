@@ -56,14 +56,12 @@ const option = ref<ECOption>({
       </template>
 
       <template #chart>
-        <ClientOnly>
-          <div class="h-100">
-            <VChart
-              :option="option"
-              autoresize
-            />
-          </div>
-        </ClientOnly>
+        <div class="h-100">
+          <VChart
+            :option="option"
+            autoresize
+          />
+        </div>
       </template>
     </UTabs>
   </UContainer>
