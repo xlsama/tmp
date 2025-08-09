@@ -4,20 +4,20 @@ import { CalendarDate } from '@internationalized/date'
 const calendarValue = shallowRef(new CalendarDate(2025, 8, 1))
 
 const option = ref<ECOption>({
+  legend: {},
+  tooltip: {},
   dataset: {
-    dimensions: ['Product', '2015', '2016', '2017'],
     source: [
-      {
-        Product: 'Matcha Latte',
-        2015: 54,
-        2016: 42,
-        2017: 23,
-      },
+      ['product', '2015', '2016', '2017'],
+      ['Matcha Latte', 43.3, 85.8, 93.7],
+      ['Milk Tea', 83.1, 73.4, 55.1],
+      ['Cheese Cocoa', 86.4, 65.2, 82.5],
+      ['Walnut Brownie', 72.4, 53.9, 39.1],
     ],
   },
   xAxis: { type: 'category' },
   yAxis: {},
-  series: [{ type: 'bar' }],
+  series: [{ type: 'bar' }, { type: 'bar' }, { type: 'bar' }],
 })
 </script>
 
