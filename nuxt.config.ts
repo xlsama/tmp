@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'pinia-plugin-persistedstate/nuxt',
     '@vueuse/nuxt',
+    'nuxt-echarts',
   ],
   imports: {
     presets: [{ from: 'dayjs', imports: [{ name: 'default', as: 'dayjs' }] }],
@@ -23,6 +24,16 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   vite: {
     plugins: [tailwindcss()],
+  },
+  echarts: {
+    charts: ['LineChart', 'BarChart', 'PieChart'],
+    components: [
+      'DatasetComponent',
+      'GridComponent',
+      'TooltipComponent',
+      'ToolboxComponent',
+      'LegendComponent',
+    ],
   },
   eslint: {
     config: {

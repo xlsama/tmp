@@ -2,6 +2,23 @@
 import { CalendarDate } from '@internationalized/date'
 
 const calendarValue = shallowRef(new CalendarDate(2025, 8, 1))
+
+const option = ref<ECOption>({
+  dataset: {
+    dimensions: ['Product', '2015', '2016', '2017'],
+    source: [
+      {
+        Product: 'Matcha Latte',
+        2015: 54,
+        2016: 42,
+        2017: 23,
+      },
+    ],
+  },
+  xAxis: { type: 'category' },
+  yAxis: {},
+  series: [{ type: 'bar' }],
+})
 </script>
 
 <template>
@@ -10,6 +27,7 @@ const calendarValue = shallowRef(new CalendarDate(2025, 8, 1))
       :items="[
         { label: 'Table', icon: 'i-lucide-table', slot: 'table' },
         { label: 'Calendar', icon: 'i-lucide-calendar', slot: 'calendar' },
+        { label: 'Chart', icon: 'i-lucide-chart-column-increasing', slot: 'chart' },
       ]"
     >
       <template #table>
@@ -35,6 +53,17 @@ const calendarValue = shallowRef(new CalendarDate(2025, 8, 1))
 
       <template #calendar>
         <UCalendar v-model="calendarValue" />
+      </template>
+
+      <template #chart>
+        <ClientOnly>
+          <div class="h-100">
+            <VChart
+              :option="option"
+              autoresize
+            />
+          </div>
+        </ClientOnly>
       </template>
     </UTabs>
   </UContainer>
