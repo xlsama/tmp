@@ -3,7 +3,7 @@ const { userInfo } = useUserStore()
 </script>
 
 <template>
-  <header class="flex gap-4 justify-center items-center h-15">
+  <header class="flex h-15 items-center justify-center gap-4">
     <nav class="space-x-2">
       <UButton>
         <NuxtLink to="/">Home</NuxtLink>

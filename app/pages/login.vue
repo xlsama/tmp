@@ -26,7 +26,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <main class="h-screen w-screen flex justify-center items-center bg-[#121212]">
+  <main class="flex h-screen w-screen items-center justify-center bg-[#121212]">
     <UCard class="w-full max-w-150">
       <template #header>
         <span class="font-bold">登录</span>
