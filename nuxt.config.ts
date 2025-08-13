@@ -39,4 +39,10 @@ export default defineNuxtConfig({
       stylistic: true,
     },
   },
+  icon: {
+    customCollections: [{
+      prefix: 'custom',
+      dir: './app/assets/img',
+    }],
+  },
 })

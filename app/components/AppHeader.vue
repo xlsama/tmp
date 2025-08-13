@@ -4,8 +4,8 @@ const { userInfo } = useUserStore()
 
 <template>
   <header class="flex h-15 items-center justify-center gap-4">
-    <nav class="space-x-2">
-      <UButton>
+    <nav class="flex space-x-2">
+      <UButton icon="i-custom-nuxt">
         <NuxtLink to="/">Home</NuxtLink>
       </UButton>
       <UButton>

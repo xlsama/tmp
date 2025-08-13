@@ -34,8 +34,8 @@
     "@tailwindcss/vite": "^4.1.11",
     "eslint": "^9.33.0",
     "eslint-plugin-better-tailwindcss": "^3.7.4",
-    "eslint-plugin-oxlint": "^1.11.1",
-    "oxlint": "^1.11.1",
+    "eslint-plugin-oxlint": "^1.11.2",
+    "oxlint": "^1.11.2",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.9.2"
   },
