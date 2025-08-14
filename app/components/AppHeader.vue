@@ -5,7 +5,10 @@ const { userInfo } = useUserStore()
 <template>
   <header class="flex h-15 items-center justify-center gap-4">
     <nav class="flex space-x-2">
-      <UButton icon="i-custom-nuxt">
+      <UButton
+        icon="i-custom-nuxt"
+        class="animate-in delay-200 duration-300 fade-in"
+      >
         <NuxtLink to="/">Home</NuxtLink>
       </UButton>
       <UButton>
