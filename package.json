@@ -14,7 +14,7 @@
   "dependencies": {
     "@internationalized/date": "^3.8.2",
     "@nuxt/fonts": "^0.11.4",
-    "@nuxt/ui": "^3.3.0",
+    "@nuxt/ui": "^3.3.2",
     "@pinia/nuxt": "^0.11.2",
     "@vueuse/core": "^13.6.0",
     "@vueuse/nuxt": "^13.6.0",
@@ -33,12 +33,12 @@
   "devDependencies": {
     "@iconify-json/lucide": "^1.2.62",
     "@nuxt/eslint": "^1.8.0",
-    "@tailwindcss/vite": "^4.1.11",
+    "@tailwindcss/vite": "^4.1.12",
     "eslint": "^9.33.0",
     "eslint-plugin-better-tailwindcss": "^3.7.4",
     "eslint-plugin-oxlint": "^1.11.2",
     "oxlint": "^1.11.2",
-    "tailwindcss": "^4.1.11",
+    "tailwindcss": "^4.1.12",
     "tw-animate-css": "^1.3.6",
     "typescript": "^5.9.2"
   },
