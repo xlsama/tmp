@@ -36,10 +36,10 @@
     "@tailwindcss/vite": "^4.1.12",
     "eslint": "^9.33.0",
     "eslint-plugin-better-tailwindcss": "^3.7.4",
-    "eslint-plugin-oxlint": "^1.11.2",
-    "oxlint": "^1.11.2",
+    "eslint-plugin-oxlint": "^1.12.0",
+    "oxlint": "^1.12.0",
     "tailwindcss": "^4.1.12",
-    "tw-animate-css": "^1.3.6",
+    "tw-animate-css": "^1.3.7",
     "typescript": "^5.9.2"
   },
   "devEngines": {
