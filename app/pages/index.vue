@@ -29,9 +29,6 @@ const option = ref<ECOption>({
         { label: 'Calendar', icon: 'i-lucide-calendar', slot: 'calendar' },
         { label: 'Chart', icon: 'i-lucide-chart-column-increasing', slot: 'chart' },
       ]"
-      :ui="{
-        content: 'animate-in fade-in duration-500',
-      }"
     >
       <template #table>
         <UTable
