@@ -48,5 +48,10 @@
       "version": "24",
       "onFail": "download"
     }
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@latest"
+    } 
   }
 }
