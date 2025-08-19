@@ -27,6 +27,7 @@ export default defineNuxtConfig({
   echarts: {
     charts: ['LineChart', 'BarChart', 'PieChart'],
     components: [
+      'TitleComponent',
       'DatasetComponent',
       'GridComponent',
       'TooltipComponent',

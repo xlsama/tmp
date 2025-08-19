@@ -5,10 +5,7 @@ const { userInfo } = useUserStore()
 <template>
   <header class="flex h-15 items-center justify-center gap-4">
     <nav class="flex space-x-2">
-      <UButton
-        icon="i-custom-nuxt"
-        class="animate-in delay-200 duration-300 fade-in"
-      >
+      <UButton icon="i-custom-nuxt">
         <NuxtLink to="/">Home</NuxtLink>
       </UButton>
       <UButton>
@@ -18,6 +15,6 @@ const { userInfo } = useUserStore()
 
     <UBadge>{{ userInfo.username }}</UBadge>
 
-    <ColorModeButton />
+    <UColorModeButton />
   </header>
 </template>
