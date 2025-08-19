@@ -5,7 +5,12 @@ const { userInfo } = useUserStore()
 <template>
   <header class="flex h-15 items-center justify-center gap-4">
     <nav class="flex space-x-2">
-      <UButton icon="i-custom-nuxt">
+      <UButton
+        icon="i-custom-wechat"
+        :ui="{
+          leadingIcon: 'text-[#69BB64]',
+        }"
+      >
         <NuxtLink to="/">Home</NuxtLink>
       </UButton>
       <UButton>
