@@ -28,6 +28,7 @@ const option = ref<ECOption>({
       { label: 'Table', icon: 'i-lucide-table', slot: 'table' },
       { label: 'Calendar', icon: 'i-lucide-calendar', slot: 'calendar' },
     ]"
+    variant="link"
     class="h-full"
     :ui="{ content: 'flex-1 min-h-0' }"
   >
