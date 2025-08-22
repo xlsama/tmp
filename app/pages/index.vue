@@ -22,47 +22,38 @@ const option = ref<ECOption>({
 </script>
 
 <template>
-  <UContainer class="mt-5">
-    <UTabs
-      :items="[
-        { label: 'Table', icon: 'i-lucide-table', slot: 'table' },
-        { label: 'Calendar', icon: 'i-lucide-calendar', slot: 'calendar' },
-        { label: 'Chart', icon: 'i-lucide-chart-column-increasing', slot: 'chart' },
-      ]"
-    >
-      <template #table>
-        <UTable
-          :data="[
-            {
-              id: '4600',
-              date: '2024-03-11T15:30:00',
-              status: 'paid',
-              email: 'james.anderson@example.com',
-              amount: 594,
-            },
-            {
-              id: '4599',
-              date: '2024-03-11T10:10:00',
-              status: 'failed',
-              email: 'mia.white@example.com',
-              amount: 276,
-            },
-          ]"
-        />
-      </template>
+  <UTabs
+    :items="[
+      { label: 'Chart', icon: 'i-lucide-chart-column-increasing', slot: 'chart' },
+      { label: 'Table', icon: 'i-lucide-table', slot: 'table' },
+      { label: 'Calendar', icon: 'i-lucide-calendar', slot: 'calendar' },
+    ]"
+    class="h-full"
+    :ui="{ content: 'flex-1 min-h-0' }"
+  >
+    <template #chart>
+      <VChart
+        :option="option"
+        autoresize
+      />
+    </template>
 
-      <template #calendar>
-        <UCalendar v-model="calendarValue" />
-      </template>
+    <template #table>
+      <UTable
+        :data="Array(100).fill(0).map((_, i) => ({
+          id: i+1,
+          date: dayjs().subtract(i, 'day').format('YYYY-MM-DDTHH:mm:ss'),
+          status: i % 2 === 0 ? 'paid' : 'failed',
+          email: `user${i}@example.com`,
+          amount: Math.floor(Math.random() * 1000),
+        }))"
+      />
+    </template>
 
-      <template #chart>
-        <div class="h-100">
-          <VChart
-            :option="option"
-            autoresize
-          />
-        </div>
-      </template>
-    </UTabs>
-  </UContainer>
+    <template #calendar>
+      <UCalendar
+        v-model="calendarValue"
+      />
+    </template>
+  </UTabs>
 </template>

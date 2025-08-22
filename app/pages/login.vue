@@ -27,6 +27,18 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
 <template>
   <main class="flex h-screen w-screen items-center justify-center bg-[#121212]">
+    <UButton
+      icon="i-lucide-arrow-left"
+      class="
+        absolute top-10 left-10
+        hover:bg-white/10
+      "
+      variant="ghost"
+      to="/"
+      :ui="{
+        leadingIcon: 'text-white',
+      }"
+    />
     <UCard class="w-full max-w-150">
       <template #header>
         <span class="font-bold">登录</span>
