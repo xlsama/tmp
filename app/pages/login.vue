@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import z from 'zod'
-import type { FormSubmitEvent } from '@nuxt/ui'
 
 definePageMeta({
   layout: false,
@@ -19,10 +18,6 @@ const state = reactive<Partial<Schema>>({
 })
 
 const toast = useToast()
-async function onSubmit(event: FormSubmitEvent<Schema>) {
-  toast.add({ title: 'Success', description: JSON.stringify(state), color: 'success' })
-  console.log(event.data)
-}
 </script>
 
 <template>
@@ -48,7 +43,9 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         :schema="schema"
         :state="state"
         class="space-y-4"
-        @submit="onSubmit"
+        @submit="() => {
+          toast.add({ title: 'Success', description: JSON.stringify(state), color: 'success' })
+        }"
       >
         <UFormField
           label="Email"
