@@ -26,6 +26,13 @@ export default defineNuxtConfig({
     },
   },
   compatibilityDate: '2025-07-15',
+  nitro: {
+    routeRules: {
+      '/api/**': {
+        proxy: 'https://todolist-server-xzcd.onrender.com/api/**',
+      },
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
   },
@@ -46,6 +53,7 @@ export default defineNuxtConfig({
     },
   },
   icon: {
+    localApiEndpoint: '/_nuxt_icon',
     customCollections: [{
       prefix: 'custom',
       dir: './app/assets/img',

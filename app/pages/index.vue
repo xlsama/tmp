@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import { CalendarDate } from '@internationalized/date'
 
+const { $api } = useNuxtApp()
+
+const { data, pending } = await useAsyncData(() => $api('/api/todos'), {
+  server: false,
+})
+
+watchEffect(() => {
+  console.log('🚀 ~ ', data.value, pending.value)
+})
+
 const calendarValue = shallowRef(new CalendarDate(2025, 8, 1))
 
 const option = ref<ECOption>({
