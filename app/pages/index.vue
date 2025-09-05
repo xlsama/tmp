@@ -3,9 +3,7 @@ import { CalendarDate } from '@internationalized/date'
 
 const { $api } = useNuxtApp()
 
-const { data, pending } = await useAsyncData(() => $api('/api/todos'), {
-  server: false,
-})
+const { data, pending } = await useAsyncData(() => $api('/api/todos'))
 
 watchEffect(() => {
   console.log('🚀 ~ ', data.value, pending.value)
