@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { motion } from 'motion-v'
+
 const { userInfo } = useUserStore()
 </script>
 
@@ -19,14 +21,16 @@ const { userInfo } = useUserStore()
     </nav>
 
     <div class="flex items-center gap-3">
-      <UBadge
-        icon="i-custom-wechat"
-        :ui="{
-          leadingIcon: 'text-[#69BB64]',
-        }"
-      >
-        {{ userInfo.username }}
-      </UBadge>
+      <motion.div :while-hover="{ scale: 1.05 }">
+        <UBadge
+          icon="i-custom-wechat"
+          :ui="{
+            leadingIcon: 'text-[#69BB64]',
+          }"
+        >
+          {{ userInfo.username }}
+        </UBadge>
+      </motion.div>
       <UColorModeButton />
     </div>
   </header>
