@@ -21,7 +21,10 @@ const { userInfo } = useUserStore()
     </nav>
 
     <div class="flex items-center gap-3">
-      <motion.div :while-hover="{ scale: 1.05 }">
+      <motion.div
+        :while-hover="{ scale: 1.05 }"
+        :while-press="{ scale: 0.95 }"
+      >
         <UBadge
           icon="i-custom-wechat"
           :ui="{
