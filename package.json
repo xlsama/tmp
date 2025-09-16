@@ -9,9 +9,9 @@
     "preview": "nuxt preview",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "nuxt prepare",
-    "lint": "oxlint . --fix && eslint . --fix"
+    "lint": "oxlint . --fix --type-aware && eslint . --fix"
   },
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.16.1",
   "dependencies": {
     "@internationalized/date": "^3.9.0",
     "@nuxt/fonts": "^0.11.4",
@@ -23,23 +23,24 @@
     "dayjs": "^1.11.18",
     "echarts": "^6.0.0",
     "motion-v": "^1.7.1",
-    "nuxt": "^4.1.1",
+    "nuxt": "^4.1.2",
     "nuxt-echarts": "^1.0.0",
     "pinia": "^3.0.3",
     "pinia-plugin-persistedstate": "^4.5.0",
     "tailwind-merge": "^3.3.1",
     "vue": "^3.5.21",
     "vue-router": "^4.5.1",
-    "zod": "^4.1.5"
+    "zod": "^4.1.8"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.2.66",
+    "@iconify-json/lucide": "^1.2.68",
     "@nuxt/eslint": "^1.9.0",
     "@tailwindcss/vite": "^4.1.13",
     "eslint": "^9.35.0",
-    "eslint-plugin-better-tailwindcss": "^3.7.7",
-    "eslint-plugin-oxlint": "^1.14.0",
-    "oxlint": "^1.14.0",
+    "eslint-plugin-better-tailwindcss": "^3.7.8",
+    "eslint-plugin-oxlint": "^1.15.0",
+    "oxlint": "^1.15.0",
+    "oxlint-tsgolint": "^0.2.0",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2"
   },

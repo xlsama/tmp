@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { motion } from 'motion-v'
+import AnimateValue from '../AnimateValue.vue'
 
 const { userInfo } = useUserStore()
 </script>
@@ -21,6 +22,10 @@ const { userInfo } = useUserStore()
     </nav>
 
     <div class="flex items-center gap-3">
+      <AnimateValue
+        :value="100"
+        class="text-base font-medium"
+      />
       <motion.div
         :while-hover="{ scale: 1.05 }"
         :while-press="{ scale: 0.95 }"
