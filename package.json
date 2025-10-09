@@ -44,15 +44,8 @@
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2"
   },
-  "devEngines": {
-    "runtime": {
-      "name": "node",
-      "version": "24",
-      "onFail": "download"
-    }
-  },
   "engines": {
-    "node": "^24"
+    "node": ">=22"
   },
   "pnpm": {
     "overrides": {
