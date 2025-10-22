@@ -56,6 +56,11 @@ export default defineNuxtConfig({
       stylistic: true,
     },
   },
+  fonts: {
+    families: [
+      { name: 'Inter', weights: [400, 500] },
+    ],
+  },
   icon: {
     localApiEndpoint: '/_nuxt_icon',
     customCollections: [{
