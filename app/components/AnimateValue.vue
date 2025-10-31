@@ -83,7 +83,7 @@ onMounted(() => {
         ? previous
         : isFiniteNumber(animatedValue.value)
           ? animatedValue.value
-          : props.from ?? 0
+          : (props.from ?? 0)
       if (!isFiniteNumber(start)) {
         animatedValue.value = next
         return
@@ -100,10 +100,7 @@ onBeforeUnmount(() => stopAnimation())
 <template>
   <ClientOnly>
     <span>
-      <slot
-        :value="animatedValue"
-        :formatted-value="formattedValue"
-      >
+      <slot :value="animatedValue" :formatted-value="formattedValue">
         {{ formattedValue }}
       </slot>
     </span>

@@ -24,10 +24,7 @@ const toast = useToast()
   <main class="flex h-screen w-screen items-center justify-center bg-[#121212]">
     <UButton
       icon="i-lucide-arrow-left"
-      class="
-        absolute top-10 left-10
-        hover:bg-white/10
-      "
+      class="absolute top-10 left-10 hover:bg-white/10"
       variant="ghost"
       to="/"
       :ui="{
@@ -43,26 +40,17 @@ const toast = useToast()
         :schema="schema"
         :state="state"
         class="space-y-4"
-        @submit="() => {
-          toast.add({ title: 'Success', description: JSON.stringify(state), color: 'success' })
-        }"
+        @submit="
+          () => {
+            toast.add({ title: 'Success', description: JSON.stringify(state), color: 'success' })
+          }
+        "
       >
-        <UFormField
-          label="Email"
-          name="email"
-          required
-        >
-          <UInput
-            v-model="state.email"
-            class="w-full"
-          />
+        <UFormField label="Email" name="email" required>
+          <UInput v-model="state.email" class="w-full" />
         </UFormField>
 
-        <UFormField
-          label="Password"
-          name="password"
-          required
-        >
+        <UFormField label="Password" name="password" required>
           <UInput
             v-model="state.password"
             type="password"
@@ -71,9 +59,7 @@ const toast = useToast()
           />
         </UFormField>
 
-        <UButton type="submit">
-          Submit
-        </UButton>
+        <UButton type="submit"> Submit </UButton>
       </UForm>
     </UCard>
   </main>

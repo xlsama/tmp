@@ -62,15 +62,15 @@ export default defineNuxtConfig({
     },
   },
   fonts: {
-    families: [
-      { name: 'Inter', weights: [400, 500] },
-    ],
+    families: [{ name: 'Inter', weights: [400, 500] }],
   },
   icon: {
     localApiEndpoint: '/_nuxt_icon',
-    customCollections: [{
-      prefix: 'custom',
-      dir: './app/assets/img',
-    }],
+    customCollections: [
+      {
+        prefix: 'custom',
+        dir: './app/assets/img',
+      },
+    ],
   },
 })

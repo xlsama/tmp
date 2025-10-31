@@ -3,10 +3,7 @@ import { zh_cn } from '@nuxt/ui/locale'
 </script>
 
 <template>
-  <UApp
-    :locale="zh_cn"
-    :toaster="{ position: 'top-right', expand: false }"
-  >
+  <UApp :locale="zh_cn" :toaster="{ position: 'top-right', expand: false }">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

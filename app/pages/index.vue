@@ -41,28 +41,27 @@ const option = ref<ECOption>({
     :ui="{ content: 'flex-1 min-h-0' }"
   >
     <template #chart>
-      <VChart
-        :option="option"
-        autoresize
-      />
+      <VChart :option="option" autoresize />
     </template>
 
     <template #table>
       <UTable
-        :data="Array(100).fill(0).map((_, i) => ({
-          id: i+1,
-          date: dayjs().subtract(i, 'day').format('YYYY-MM-DDTHH:mm:ss'),
-          status: i % 2 === 0 ? 'paid' : 'failed',
-          email: `user${i}@example.com`,
-          amount: Math.floor(Math.random() * 1000),
-        }))"
+        :data="
+          Array(100)
+            .fill(0)
+            .map((_, i) => ({
+              id: i + 1,
+              date: dayjs().subtract(i, 'day').format('YYYY-MM-DDTHH:mm:ss'),
+              status: i % 2 === 0 ? 'paid' : 'failed',
+              email: `user${i}@example.com`,
+              amount: Math.floor(Math.random() * 1000),
+            }))
+        "
       />
     </template>
 
     <template #calendar>
-      <UCalendar
-        v-model="calendarValue"
-      />
+      <UCalendar v-model="calendarValue" />
     </template>
   </UTabs>
 </template>
