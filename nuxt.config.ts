@@ -56,11 +56,6 @@ export default defineNuxtConfig({
       'LegendComponent',
     ],
   },
-  eslint: {
-    config: {
-      stylistic: true,
-    },
-  },
   fonts: {
     families: [{ name: 'Inter', weights: [400, 500] }],
   },
