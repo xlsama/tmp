@@ -13,7 +13,6 @@ export default defineNuxtConfig({
   ],
   imports: {
     presets: [{ from: 'dayjs', imports: [{ name: 'default', as: 'dayjs' }] }],
-    dirs: ['~/api/**'],
   },
   devtools: { enabled: true },
   app: {
