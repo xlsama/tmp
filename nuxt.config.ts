@@ -11,9 +11,6 @@ export default defineNuxtConfig({
     'nuxt-echarts',
     'motion-v/nuxt',
   ],
-  imports: {
-    presets: [{ from: 'dayjs', imports: [{ name: 'default', as: 'dayjs' }] }],
-  },
   devtools: { enabled: true },
   app: {
     head: {
