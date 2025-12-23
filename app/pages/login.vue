@@ -59,7 +59,7 @@ const toast = useToast()
           />
         </UFormField>
 
-        <UButton type="submit"> Submit </UButton>
+        <UButton type="submit">Submit</UButton>
       </UForm>
     </UCard>
   </main>

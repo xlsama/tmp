@@ -1,6 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
@@ -25,7 +24,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      apiBase: '',
+      apiBaseUrl: '',
     },
   },
   compatibilityDate: '2025-07-15',
@@ -43,6 +42,14 @@ export default defineNuxtConfig({
       'LegendComponent',
     ],
   },
+  nitro: {
+    devProxy: {
+      '/api': {
+        target: 'http://stg.example.com/api',
+        changeOrigin: true,
+      },
+    },
+  },
   fonts: {
     families: [{ name: 'Inter', weights: [400, 500] }],
   },
@@ -54,5 +61,19 @@ export default defineNuxtConfig({
         dir: './app/assets/img',
       },
     ],
+  },
+  $development: {
+    runtimeConfig: {
+      public: {
+        apiBaseUrl: '',
+      },
+    },
+  },
+  $production: {
+    runtimeConfig: {
+      public: {
+        apiBaseUrl: 'https://example.com',
+      },
+    },
   },
 })
