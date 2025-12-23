@@ -21,15 +21,12 @@ const toast = useToast()
 </script>
 
 <template>
-  <main class="flex h-screen w-screen items-center justify-center bg-[#121212]">
+  <main class="grid min-h-screen place-items-center bg-gray-50 px-4">
     <UButton
       icon="i-lucide-arrow-left"
-      class="absolute top-10 left-10 hover:bg-white/10"
+      class="fixed top-10 left-10 z-10 rounded-full hover:bg-gray-100"
       variant="ghost"
       to="/"
-      :ui="{
-        leadingIcon: 'text-white',
-      }"
     />
     <UCard class="w-full max-w-150">
       <template #header>
