@@ -1,5 +1,6 @@
 {
   "name": "nuxt-app",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,9 +10,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "oxlint . --fix --type-aware && eslint . --fix",
-    "format": "prettier --write ."
+    "format": "oxfmt && prettier --write .",
+    "release": "bumpp"
   },
-  "packageManager": "pnpm@10.20.0",
   "dependencies": {
     "@internationalized/date": "^3.10.0",
     "@nuxt/fonts": "^0.11.4",
@@ -37,9 +38,11 @@
     "@nuxt/eslint": "^1.10.0",
     "@prettier/plugin-oxc": "^0.0.4",
     "@tailwindcss/vite": "^4.1.16",
+    "bumpp": "^10.3.2",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-oxlint": "^1.25.0",
+    "oxfmt": "^0.20.0",
     "oxlint": "^1.25.0",
     "oxlint-tsgolint": "^0.4.0",
     "prettier": "^3.6.2",
@@ -49,5 +52,11 @@
   },
   "engines": {
     "node": ">=22"
+  },
+  "packageManager": "pnpm@10.26.1",
+  "pnpm": {
+    "overrides": {
+      "vite": "^8.0.0-beta.4"
+    }
   }
 }

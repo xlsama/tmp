@@ -29,15 +29,6 @@ export default defineNuxtConfig({
     },
   },
   compatibilityDate: '2025-07-15',
-  nitro: {
-    // 如果是部署到 Netlify，可以使用 Netlify Edge Functions，以获得最快的响应时间。
-    preset: 'netlify_edge',
-    routeRules: {
-      '/api/**': {
-        proxy: 'https://todolist-server-xzcd.onrender.com/api/**',
-      },
-    },
-  },
   vite: {
     plugins: [tailwindcss()],
   },
