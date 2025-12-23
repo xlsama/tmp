@@ -1,7 +1,7 @@
 <template>
-  <div class="grid min-h-screen grid-rows-[auto_1fr_auto]">
+  <div class="grid h-screen grid-rows-[auto_1fr_auto]">
     <AppHeader />
-    <div class="grid grid-cols-[260px_1fr]">
+    <div class="grid grid-cols-[260px_1fr] overflow-hidden">
       <AppSidebar />
       <main class="overflow-y-auto p-4">
         <slot />
